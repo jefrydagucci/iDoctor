@@ -52,10 +52,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="yzN-Om-42z"/>
                     <connections>
+                        <outlet property="searchBar" destination="yKw-Zh-KRy" id="ks5-gI-Ary"/>
                         <outlet property="tableView" destination="FfX-Yn-TFP" id="Dcv-Xb-A1W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="yKw-Zh-KRy">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Wlq-Uf-DC7"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
             </objects>
         </scene>
     </scenes>
