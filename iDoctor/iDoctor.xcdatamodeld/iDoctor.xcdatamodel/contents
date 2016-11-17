@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15D21" minimumToolsVersion="Automatic">
-    <entity name="Location" syncable="YES">
+    <entity name="Location" representedClassName="Location" syncable="YES">
         <attribute name="area" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Profile" syncable="YES">
+    <entity name="Profile" representedClassName="Profile" syncable="YES">
         <attribute name="area" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="experience" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
