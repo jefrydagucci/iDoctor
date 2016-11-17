@@ -32,6 +32,14 @@
     scrollView.parallaxHeader.height = CGRectGetHeight(self.searchBar.bounds);
     scrollView.parallaxHeader.mode = MXParallaxHeaderModeFill;
     scrollView.parallaxHeader.minimumHeight = scrollView.parallaxHeader.height;
+    
+    UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth([[UIScreen mainScreen] bounds]), 50)];
+    numberToolbar.barStyle = UIBarStyleBlackTranslucent;
+    numberToolbar.items = [NSArray arrayWithObjects:
+                           [[UIBarButtonItem alloc]initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(searchBarSearchButtonClicked:)],
+                           nil];
+    [numberToolbar sizeToFit];
+    self.searchBar.inputAccessoryView = numberToolbar;
 }
 
 - (void)getContentWithRefreshContentType:(RefreshContentType)refreshContentType{
