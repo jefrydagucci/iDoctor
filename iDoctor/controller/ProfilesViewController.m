@@ -42,11 +42,17 @@ UITextFieldDelegate>
                        tableView:(UITableView *)tableView
                     completion:(void(^)(void))completion{
     
-    NSInteger preferencePage = page;
-    NSInteger firstIndex = (preferencePage-1)*maxPerPage;
-    NSArray *subArray = [self.resultsArray subarrayWithRange:NSMakeRange(firstIndex, MIN(maxPerPage, self.resultsArray.count - firstIndex))];
-    
-    [self processingSuccessWithOperation:operation result:result arrData:subArray refreshContentType:refreshContentType tableView:self.tableView completion:completion];
+    [self.view showLoadingWithBlock:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            NSInteger preferencePage = page;
+            NSInteger firstIndex = (preferencePage-1)*maxPerPage;
+            NSArray *subArray = [self.resultsArray subarrayWithRange:NSMakeRange(firstIndex, MIN(maxPerPage, self.resultsArray.count - firstIndex))];
+            
+            [self processingSuccessWithOperation:operation result:result arrData:subArray refreshContentType:refreshContentType tableView:self.tableView completion:completion];
+            
+            [self.view hideActivityView];
+        });
+    }];
 }
 
 - (void)getContentWithRefreshContentType:(RefreshContentType)refreshContentType{
