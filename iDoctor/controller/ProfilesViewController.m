@@ -6,14 +6,20 @@
 //  Copyright © 2016 Appslon. All rights reserved.
 //
 
+static NSInteger maxPerPage = 10;
+
 #import "ProfilesViewController.h"
 #import "Profile+Request.h"
 #import "ProfileTableCell.h"
 
 #import "ProfileDetailViewController.h"
+#import <APLTextField/APLTextField.h>
 
 @interface ProfilesViewController ()
 <UITableViewDelegate>
+
+@property (strong, nonatomic) IBOutlet APLTextField *txPage;
+@property (strong, nonatomic) NSArray *resultsArray;
 
 @end
 
@@ -26,6 +32,19 @@
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ProfileTableCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([ProfileTableCell class])];
 }
 
+- (void)processingResultWithpage:(NSInteger)page
+                       operation:(ASManagedObjectRequestOperation *)operation
+                          result:(RKMappingResult *)result
+              refreshContentType:(RefreshContentType)refreshContentType
+                       tableView:(UITableView *)tableView
+                    completion:(void(^)(void))completion{
+    
+    NSInteger preferencePage = page;
+    NSArray *subArray = [self.resultsArray subarrayWithRange:NSMakeRange((preferencePage-1)*maxPerPage, maxPerPage)];
+    
+    [self processingSuccessWithOperation:operation result:result arrData:subArray refreshContentType:refreshContentType tableView:self.tableView completion:completion];
+}
+
 - (void)getContentWithRefreshContentType:(RefreshContentType)refreshContentType{
     [super getContentWithRefreshContentType:refreshContentType];
     
@@ -33,7 +52,15 @@
         
         [Profile getProfileWithPathPattern:@"/test/datalist.json" success:^(ASManagedObjectRequestOperation *operation, RKMappingResult *result, NSArray *resultsArray) {
             
-            [self processingSuccessWithOperation:operation result:result arrData:resultsArray refreshContentType:refreshContentType tableView:self.tableView completion:^{
+            self.resultsArray = resultsArray;
+            NSInteger page = resultsArray.count/maxPerPage;
+            NSInteger modPage = resultsArray.count%maxPerPage;
+            if(modPage>0){page++;}
+            
+            NSInteger preferencePage = [self.txPage.text integerValue];
+            if (preferencePage==0) preferencePage=1;
+            
+            [self processingResultWithpage:preferencePage operation:operation result:result refreshContentType:refreshContentType tableView:self.tableView completion:^{
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self.tableView reloadData];
                 });

@@ -113,21 +113,61 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="og4-KR-EA6">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="496"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zm4-Fi-tnj">
+                                <rect key="frame" x="0.0" y="560" width="600" height="40"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kIm-YH-ScU">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="b28-xT-nsJ"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bxR-22-Iwf" customClass="APLTextField">
+                                        <rect key="frame" x="540" y="5" width="40" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="6tc-tq-ptk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="kIm-YH-ScU" firstAttribute="leading" secondItem="Zm4-Fi-tnj" secondAttribute="leading" id="3FZ-rw-Lk1"/>
+                                    <constraint firstItem="bxR-22-Iwf" firstAttribute="top" secondItem="Zm4-Fi-tnj" secondAttribute="top" constant="5" id="XAn-jm-BXU"/>
+                                    <constraint firstAttribute="height" constant="40" id="ZwM-mC-SyM"/>
+                                    <constraint firstItem="kIm-YH-ScU" firstAttribute="top" secondItem="Zm4-Fi-tnj" secondAttribute="top" id="bMR-KH-Ss6"/>
+                                    <constraint firstAttribute="trailing" secondItem="kIm-YH-ScU" secondAttribute="trailing" id="eg9-Pb-TYe"/>
+                                    <constraint firstAttribute="bottom" secondItem="bxR-22-Iwf" secondAttribute="bottom" constant="5" id="feA-hL-Le6"/>
+                                    <constraint firstAttribute="trailing" secondItem="bxR-22-Iwf" secondAttribute="trailing" constant="20" id="mdl-g0-hMN"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="og4-KR-EA6" secondAttribute="trailing" id="5YL-k0-Ulh"/>
+                            <constraint firstItem="noY-Ll-4G3" firstAttribute="top" secondItem="Zm4-Fi-tnj" secondAttribute="bottom" id="6XP-fD-z0Y"/>
+                            <constraint firstItem="Zm4-Fi-tnj" firstAttribute="top" secondItem="og4-KR-EA6" secondAttribute="bottom" id="75o-D2-zyS"/>
+                            <constraint firstAttribute="trailing" secondItem="Zm4-Fi-tnj" secondAttribute="trailing" id="Teh-q6-0AP"/>
                             <constraint firstItem="og4-KR-EA6" firstAttribute="leading" secondItem="QaL-bX-7kP" secondAttribute="leading" id="aMY-gL-yAG"/>
+                            <constraint firstItem="Zm4-Fi-tnj" firstAttribute="leading" secondItem="QaL-bX-7kP" secondAttribute="leading" id="mST-oM-c0I"/>
                             <constraint firstItem="og4-KR-EA6" firstAttribute="top" secondItem="eYu-4V-i1z" secondAttribute="bottom" id="oFP-ay-YPc"/>
-                            <constraint firstItem="noY-Ll-4G3" firstAttribute="top" secondItem="og4-KR-EA6" secondAttribute="bottom" id="p8W-yw-LgS"/>
+                            <constraint firstItem="noY-Ll-4G3" firstAttribute="top" secondItem="og4-KR-EA6" secondAttribute="bottom" constant="100" id="p8W-yw-LgS"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="p8W-yw-LgS"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="7sJ-Kp-7pv"/>
                     <connections>
                         <outlet property="tableView" destination="og4-KR-EA6" id="eKZ-LH-jNc"/>
+                        <outlet property="txPage" destination="bxR-22-Iwf" id="iAX-SN-g53"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sQJ-d0-hv7" userLabel="First Responder" sceneMemberID="firstResponder"/>

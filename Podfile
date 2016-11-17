@@ -18,6 +18,7 @@ pod 'UILabel+ContentSize', '~> 1.0'
 pod 'TTTAttributedLabel'
 pod 'SVProgressHUD'
 pod 'MXParallaxHeader'
+pod 'APLTextField'
 
 # helper
 pod 'ASBaseIOSProject', '~> 0.9.5'
