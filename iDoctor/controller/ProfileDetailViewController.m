@@ -39,13 +39,6 @@
     scrollView.parallaxHeader.height = CGRectGetHeight(self.headerView.bounds);
     scrollView.parallaxHeader.mode = MXParallaxHeaderModeFill;
     scrollView.parallaxHeader.minimumHeight = 0;
-    
-    __weak typeof(self) weakSelf = self;
-    [scrollView addPullToRefreshWithActionHandler:^{
-        [weakSelf refreshProfile];
-        [weakSelf.scrollView.pullToRefreshView stopAnimating];
-    }];
-    [scrollView.pullToRefreshView setCustomView:[UIView new] forState:SVPullToRefreshStateAll];
 }
 
 - (void)refreshProfile{
@@ -72,6 +65,8 @@
     [super viewWillAppear:animated];
     
     [self refreshProfile];
+    
+    self.title = self.profile.name;
 }
 
 - (void)updateViewWithProfile:(Profile *)profile{

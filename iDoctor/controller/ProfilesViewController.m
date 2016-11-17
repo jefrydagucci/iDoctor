@@ -35,6 +35,11 @@ UITextFieldDelegate>
     self.txPage.delegate = self;
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.title = @"Doctors";
+}
+
 - (void)ASTableViewReloadContentByPullingTopView:(UITableView *)tableView{
     [self getContentWithRefreshContentType:RefreshContentTypeReplaceAll];
 }

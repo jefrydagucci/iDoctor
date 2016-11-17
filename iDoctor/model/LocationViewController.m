@@ -42,6 +42,11 @@
     self.searchBar.inputAccessoryView = numberToolbar;
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.title = @"Location";
+}
+
 - (void)ASTableViewReloadContentByPullingTopView:(UITableView *)tableView{
     [self getContentWithRefreshContentType:RefreshContentTypeReplaceAll];
 }
