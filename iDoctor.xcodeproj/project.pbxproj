@@ -10,6 +10,7 @@
 		1EC5D8B8DF1207654AC190B9 /* libPods-iDoctor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDC949B183EA74DD01246333 /* libPods-iDoctor.a */; };
 		AC7097156763AB9EB2F7551C /* libPods-iDoctorUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2887C9A4FEFA3B28ED5D90A /* libPods-iDoctorUITests.a */; };
 		FA0741CB1DDDEC03005F7D70 /* helper in Resources */ = {isa = PBXBuildFile; fileRef = FA0741CA1DDDEC03005F7D70 /* helper */; };
+		FA0741CD1DDE140E005F7D70 /* model in Resources */ = {isa = PBXBuildFile; fileRef = FA0741CC1DDE140E005F7D70 /* model */; };
 		FA4E834C1DDDDB6800AAC364 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4E834B1DDDDB6800AAC364 /* main.m */; };
 		FA4E834F1DDDDB6800AAC364 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4E834E1DDDDB6800AAC364 /* AppDelegate.m */; };
 		FA4E83521DDDDB6800AAC364 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4E83511DDDDB6800AAC364 /* ViewController.m */; };
@@ -38,6 +39,7 @@
 		C49AE2D6C5432EC029357D91 /* Pods-iDoctorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iDoctorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iDoctorUITests/Pods-iDoctorUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EDC949B183EA74DD01246333 /* libPods-iDoctor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iDoctor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0741CA1DDDEC03005F7D70 /* helper */ = {isa = PBXFileReference; lastKnownFileType = folder; path = helper; sourceTree = "<group>"; };
+		FA0741CC1DDE140E005F7D70 /* model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = model; sourceTree = "<group>"; };
 		FA4E83471DDDDB6800AAC364 /* iDoctor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDoctor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA4E834B1DDDDB6800AAC364 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA4E834D1DDDDB6800AAC364 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		FA4E83491DDDDB6800AAC364 /* iDoctor */ = {
 			isa = PBXGroup;
 			children = (
+				FA0741CC1DDE140E005F7D70 /* model */,
 				FA0741CA1DDDEC03005F7D70 /* helper */,
 				FA4E834D1DDDDB6800AAC364 /* AppDelegate.h */,
 				FA4E834E1DDDDB6800AAC364 /* AppDelegate.m */,
@@ -237,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA4E835D1DDDDB6800AAC364 /* LaunchScreen.storyboard in Resources */,
+				FA0741CD1DDE140E005F7D70 /* model in Resources */,
 				FA4E835A1DDDDB6800AAC364 /* Assets.xcassets in Resources */,
 				FA0741CB1DDDEC03005F7D70 /* helper in Resources */,
 				FA4E83551DDDDB6800AAC364 /* Main.storyboard in Resources */,

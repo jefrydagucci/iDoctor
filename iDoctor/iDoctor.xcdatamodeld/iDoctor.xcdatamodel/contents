@@ -1,4 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15D21" minimumToolsVersion="Automatic">
+    <entity name="Location" syncable="YES">
+        <attribute name="area" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Profile" syncable="YES">
+        <attribute name="area" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="experience" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="longitute" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="obj_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="obj_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rate" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="recommendation" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="schedule" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="speciality" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Location" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Profile" positionX="-54" positionY="9" width="128" height="240"/>
+    </elements>
 </model>
