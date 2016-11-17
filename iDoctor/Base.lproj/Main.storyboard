@@ -22,7 +22,7 @@
             </objects>
             <point key="canvasLocation" x="-608" y="175"/>
         </scene>
-        <!--Location View Controller-->
+        <!--Location-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LocationViewController" sceneMemberID="viewController">
@@ -83,7 +83,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="yzN-Om-42z"/>
+                    <navigationItem key="navigationItem" title="Location" id="yzN-Om-42z"/>
                     <connections>
                         <outlet property="searchBar" destination="yKw-Zh-KRy" id="ks5-gI-Ary"/>
                         <outlet property="tableView" destination="FfX-Yn-TFP" id="Dcv-Xb-A1W"/>
@@ -100,7 +100,7 @@
             </objects>
             <point key="canvasLocation" x="238" y="-136"/>
         </scene>
-        <!--Profiles View Controller-->
+        <!--Doctors-->
         <scene sceneID="pvA-aq-98u">
             <objects>
                 <viewController id="SxO-Er-FLe" customClass="ProfilesViewController" sceneMemberID="viewController">
@@ -164,7 +164,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="7sJ-Kp-7pv"/>
+                    <navigationItem key="navigationItem" title="Doctors" id="7sJ-Kp-7pv"/>
                     <connections>
                         <outlet property="tableView" destination="og4-KR-EA6" id="eKZ-LH-jNc"/>
                         <outlet property="txPage" destination="bxR-22-Iwf" id="iAX-SN-g53"/>

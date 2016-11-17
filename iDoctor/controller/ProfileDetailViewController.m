@@ -64,6 +64,8 @@
 - (void)updateViewWithProfile:(Profile *)profile{
     _profile = profile;
     
+    self.title = profile.name;
+    
     self.labelArea.text = profile.area;
     self.labelName.text = profile.name;
     self.labelRate.text = [NSString stringWithFormat:@"IDR %li", profile.rate.integerValue];
