@@ -32,6 +32,9 @@
     self.labelArea.text = profile.area;
     self.labelSpeciality.text   = profile.speciality;
     self.labelRate.text = [NSString stringWithFormat:@"%li", profile.rate.integerValue];
+    
+    NSURL *imgURL = [NSURL URLWithString:profile.photo?profile.photo:@""];
+    [self.imgView setImageWithURL:imgURL];
 }
 
 @end
