@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -47,7 +48,17 @@
                                     <constraint firstAttribute="height" constant="40" id="nDA-Au-J7n"/>
                                 </constraints>
                                 <state key="normal" title="Find Doctor"/>
+                                <connections>
+                                    <segue destination="SxO-Er-FLe" kind="push" id="f02-Cv-T06"/>
+                                </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbi-oS-GUk" userLabel="separator">
+                                <rect key="frame" x="0.0" y="521" width="600" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="k49-uI-ohn"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -56,11 +67,18 @@
                             <constraint firstAttribute="trailing" secondItem="FfX-Yn-TFP" secondAttribute="trailing" id="DqT-2G-qgc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mum-Vb-ct8" secondAttribute="bottom" constant="20" id="M7L-83-Ki9"/>
                             <constraint firstItem="mum-Vb-ct8" firstAttribute="top" secondItem="FfX-Yn-TFP" secondAttribute="bottom" constant="20" id="MGi-0z-tbr"/>
+                            <constraint firstItem="sbi-oS-GUk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="b0p-4R-ZR2"/>
+                            <constraint firstItem="sbi-oS-GUk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hKI-7o-7Hs"/>
                             <constraint firstItem="FfX-Yn-TFP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ke1-Me-5wo"/>
+                            <constraint firstItem="sbi-oS-GUk" firstAttribute="top" secondItem="FfX-Yn-TFP" secondAttribute="bottom" constant="1" id="lU6-rO-AR3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sbi-oS-GUk" secondAttribute="trailing" id="tlv-TB-Wsw"/>
+                            <constraint firstAttribute="trailing" secondItem="sbi-oS-GUk" secondAttribute="trailing" id="ydL-uQ-hjy"/>
                             <constraint firstAttribute="trailing" secondItem="mum-Vb-ct8" secondAttribute="trailing" constant="20" id="yqd-14-bax"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="b0p-4R-ZR2"/>
+                                <exclude reference="tlv-TB-Wsw"/>
                                 <exclude reference="8ZE-Kb-50q"/>
                             </mask>
                         </variation>
@@ -80,6 +98,26 @@
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
             </objects>
+            <point key="canvasLocation" x="238" y="-136"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pvA-aq-98u">
+            <objects>
+                <viewController id="SxO-Er-FLe" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eYu-4V-i1z"/>
+                        <viewControllerLayoutGuide type="bottom" id="noY-Ll-4G3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QaL-bX-7kP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7sJ-Kp-7pv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sQJ-d0-hv7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="845" y="27"/>
         </scene>
     </scenes>
 </document>
