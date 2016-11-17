@@ -40,6 +40,7 @@ PODS:
   - SDCAutoLayout (2.0.3)
   - SOCKit (1.1)
   - SVProgressHUD (2.0.4)
+  - SVPullToRefresh (0.4.1)
   - TransitionKit (2.1.1)
   - TTTAttributedLabel (2.0.0)
   - UILabel+ContentSize (1.0.3)
@@ -55,6 +56,7 @@ DEPENDENCIES:
   - MXParallaxHeader
   - SDCAutoLayout
   - SVProgressHUD
+  - SVPullToRefresh
   - TTTAttributedLabel
   - UILabel+ContentSize (~> 1.0)
 
@@ -74,10 +76,11 @@ SPEC CHECKSUMS:
   SDCAutoLayout: e6885bb39ab8e2ec2ff84d158f38035f025f7420
   SOCKit: c7376ac262bea9115b8f749358f762522a47d392
   SVProgressHUD: bfde85ed6c573ea802b9cb37894ed9b629034f1b
+  SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
   TransitionKit: 3a14b6acc7cf2d1dd3e454e24dbad1cfab9a1ef1
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
   UILabel+ContentSize: ca71fe5d87afd752e53a34466e52598d65db4705
 
-PODFILE CHECKSUM: d1000ccb8076780ca56d81b32426bb5e0d02d852
+PODFILE CHECKSUM: 1dbefdcbfa5fc537f9555cf4a92f30c443c09bf3
 
 COCOAPODS: 1.0.1

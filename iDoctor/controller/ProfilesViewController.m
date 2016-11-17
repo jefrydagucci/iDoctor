@@ -35,6 +35,10 @@ UITextFieldDelegate>
     self.txPage.delegate = self;
 }
 
+- (void)ASTableViewReloadContentByPullingTopView:(UITableView *)tableView{
+    [self getContentWithRefreshContentType:RefreshContentTypeReplaceAll];
+}
+
 - (void)processingResultWithpage:(NSInteger)page
                        operation:(ASManagedObjectRequestOperation *)operation
                           result:(RKMappingResult *)result

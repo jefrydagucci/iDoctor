@@ -42,6 +42,10 @@
     self.searchBar.inputAccessoryView = numberToolbar;
 }
 
+- (void)ASTableViewReloadContentByPullingTopView:(UITableView *)tableView{
+    [self getContentWithRefreshContentType:RefreshContentTypeReplaceAll];
+}
+
 - (void)getContentWithRefreshContentType:(RefreshContentType)refreshContentType{
     [super getContentWithRefreshContentType:refreshContentType];
     

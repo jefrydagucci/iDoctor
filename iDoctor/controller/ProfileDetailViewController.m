@@ -39,11 +39,16 @@
     scrollView.parallaxHeader.height = CGRectGetHeight(self.headerView.bounds);
     scrollView.parallaxHeader.mode = MXParallaxHeaderModeFill;
     scrollView.parallaxHeader.minimumHeight = 0;
+    
+    __weak typeof(self) weakSelf = self;
+    [scrollView addPullToRefreshWithActionHandler:^{
+        [weakSelf refreshProfile];
+        [weakSelf.scrollView.pullToRefreshView stopAnimating];
+    }];
+    [scrollView.pullToRefreshView setCustomView:[UIView new] forState:SVPullToRefreshStateAll];
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    
+- (void)refreshProfile{
     NSString *profileId = self.profile.obj_id;
     [self.view showLoadingWithBlock:^{
         [Profile getProfileWithPathPattern:[NSString stringWithFormat:@"/%@/profile/%@.json",
@@ -61,6 +66,12 @@
             [CSNotificationView showInViewController:self style:CSNotificationViewStyleError message:error.localizedDescription];
         }];
     }];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self refreshProfile];
 }
 
 - (void)updateViewWithProfile:(Profile *)profile{

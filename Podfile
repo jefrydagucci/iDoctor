@@ -20,6 +20,7 @@ pod 'SVProgressHUD'
 pod 'MXParallaxHeader'
 pod 'APLTextField'
 pod 'CSNotificationView'
+pod 'SVPullToRefresh'
 
 # helper
 pod 'ASBaseIOSProject', '~> 0.9.5'
