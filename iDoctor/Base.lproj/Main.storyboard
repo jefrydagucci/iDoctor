@@ -100,10 +100,10 @@
             </objects>
             <point key="canvasLocation" x="238" y="-136"/>
         </scene>
-        <!--View Controller-->
+        <!--Profiles View Controller-->
         <scene sceneID="pvA-aq-98u">
             <objects>
-                <viewController id="SxO-Er-FLe" sceneMemberID="viewController">
+                <viewController id="SxO-Er-FLe" customClass="ProfilesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eYu-4V-i1z"/>
                         <viewControllerLayoutGuide type="bottom" id="noY-Ll-4G3"/>

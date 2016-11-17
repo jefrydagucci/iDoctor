@@ -47,6 +47,7 @@
 		FA9F552A1DDE300C004C74CC /* MRListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9F55271DDE300C004C74CC /* MRListViewController.m */; };
 		FA9F552B1DDE300C004C74CC /* MRTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9F55291DDE300C004C74CC /* MRTableViewController.m */; };
 		FA9F552F1DDE3036004C74CC /* MRTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9F552E1DDE3036004C74CC /* MRTableViewCell.m */; };
+		FA9F55321DDE3F56004C74CC /* ProfilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9F55311DDE3F56004C74CC /* ProfilesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,8 @@
 		FA9F55291DDE300C004C74CC /* MRTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRTableViewController.m; path = controller/MRTableViewController.m; sourceTree = "<group>"; };
 		FA9F552D1DDE3036004C74CC /* MRTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRTableViewCell.h; path = view/MRTableViewCell.h; sourceTree = "<group>"; };
 		FA9F552E1DDE3036004C74CC /* MRTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRTableViewCell.m; path = view/MRTableViewCell.m; sourceTree = "<group>"; };
+		FA9F55301DDE3F56004C74CC /* ProfilesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfilesViewController.h; path = controller/ProfilesViewController.h; sourceTree = "<group>"; };
+		FA9F55311DDE3F56004C74CC /* ProfilesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfilesViewController.m; path = controller/ProfilesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,6 +326,8 @@
 				FA9F55271DDE300C004C74CC /* MRListViewController.m */,
 				FA9F55281DDE300C004C74CC /* MRTableViewController.h */,
 				FA9F55291DDE300C004C74CC /* MRTableViewController.m */,
+				FA9F55301DDE3F56004C74CC /* ProfilesViewController.h */,
+				FA9F55311DDE3F56004C74CC /* ProfilesViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -539,6 +544,7 @@
 				FA4E834F1DDDDB6800AAC364 /* AppDelegate.m in Sources */,
 				FA9F550F1DDE2B85004C74CC /* NSManagedObject+ASManagedObjectRequestOperation.m in Sources */,
 				FA9F55091DDE2B85004C74CC /* MRDatabaseManager.m in Sources */,
+				FA9F55321DDE3F56004C74CC /* ProfilesViewController.m in Sources */,
 				FA9F552F1DDE3036004C74CC /* MRTableViewCell.m in Sources */,
 				FA4E834C1DDDDB6800AAC364 /* main.m in Sources */,
 				FA9F55171DDE2B85004C74CC /* Location+CoreDataProperties.m in Sources */,
