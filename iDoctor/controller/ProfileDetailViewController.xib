@@ -19,6 +19,7 @@
                 <outlet property="labelRecommendation" destination="RB1-pQ-vid" id="Rey-VW-c9b"/>
                 <outlet property="labelSchedule" destination="6Je-XW-kHc" id="SVc-Ne-WLH"/>
                 <outlet property="labelSpeciality" destination="DGa-5h-64s" id="Pg7-zT-XVI"/>
+                <outlet property="mapView" destination="aVP-ci-Wss" id="p5K-bs-GPa"/>
                 <outlet property="scrollView" destination="Nm0-1U-VZw" id="S3c-rL-CfS"/>
                 <outlet property="view" destination="pF1-Cq-9Oj" id="gaa-QV-RjA"/>
             </connections>

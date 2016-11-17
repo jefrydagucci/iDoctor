@@ -1,5 +1,6 @@
 # Uncomment this line to define a global platform for your project
 # platform :ios, '9.0'
+source 'https://github.com/CocoaPods/Specs.git'
 
 target 'iDoctor' do
   # Uncomment this line if you're using Swift or would like to use dynamic frameworks
@@ -20,6 +21,10 @@ pod 'MXParallaxHeader'
 
 # helper
 pod 'ASBaseIOSProject', '~> 0.9.5'
+
+#gmaps
+pod 'GoogleMaps'
+pod 'GooglePlaces'
 
   target 'iDoctorUITests' do
     inherit! :search_paths

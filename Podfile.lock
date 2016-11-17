@@ -4,6 +4,13 @@ PODS:
   - ASRestKit (0.9.1):
     - ASBaseIOSProject (~> 0.9.4)
     - RestKit (~> 0.24.0)
+  - GoogleMaps (2.1.1):
+    - GoogleMaps/Maps (= 2.1.1)
+  - GoogleMaps/Base (2.1.1)
+  - GoogleMaps/Maps (2.1.1):
+    - GoogleMaps/Base
+  - GooglePlaces (2.1.1):
+    - GoogleMaps/Base (= 2.1.1)
   - IQKeyboardManager (4.0.7)
   - ISO8601DateFormatterValueTransformer (0.6.1):
     - RKValueTransformers (~> 1.1.0)
@@ -38,6 +45,8 @@ PODS:
 DEPENDENCIES:
   - ASBaseIOSProject (~> 0.9.5)
   - ASRestKit
+  - GoogleMaps
+  - GooglePlaces
   - IQKeyboardManager
   - MXParallaxHeader
   - SDCAutoLayout
@@ -49,6 +58,8 @@ SPEC CHECKSUMS:
   AFNetworking: cf8e418e16f0c9c7e5c3150d019a3c679d015018
   ASBaseIOSProject: d9a090ac1bfa5a838b25fba1db4287be2583fb5f
   ASRestKit: 62b2f12117febd85305288b550a71f811fb239f9
+  GoogleMaps: a5b5bbe47734e2443bde781a6aa64e69fdb6d785
+  GooglePlaces: 35636d86e5020cba3856eb988c09a5491de0a65a
   IQKeyboardManager: 69002bb4fea60596b710e57d426abc00e5063630
   ISO8601DateFormatterValueTransformer: 52da467d6ec899d6aedda8e48280ac92e8ee97e6
   MXParallaxHeader: 2997592b8349baf8557ae0e4346f6b17e141de39
@@ -61,6 +72,6 @@ SPEC CHECKSUMS:
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
   UILabel+ContentSize: ca71fe5d87afd752e53a34466e52598d65db4705
 
-PODFILE CHECKSUM: 39e8785a5dc260691ab39be67373a433fc8b03c5
+PODFILE CHECKSUM: d855908a9669617ecf7ee5b5b87f3a513c006e60
 
 COCOAPODS: 1.0.1

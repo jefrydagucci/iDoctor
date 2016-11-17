@@ -10,6 +10,8 @@
 #import "Profile+Request.h"
 #import <MXParallaxHeader/MXParallaxHeader.h>
 
+@import GoogleMaps;
+
 @interface ProfileDetailViewController ()
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIView *headerView;
@@ -23,6 +25,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *labelDescription;
 @property (strong, nonatomic) IBOutlet UILabel *labelLocation;
 @property (strong, nonatomic) IBOutlet UIImageView *imgView;
+@property (strong, nonatomic) IBOutlet UIView *mapView;
 
 @end
 
@@ -72,6 +75,26 @@
     
     NSURL *url = [NSURL URLWithString:profile.photo?profile.photo:@""];
     [self.imgView setImageWithURL:url];
+    
+    
+    CLLocationCoordinate2D position;
+    position.latitude   = profile.latitude.doubleValue;
+    position.longitude  = profile.longitute.doubleValue;
+    
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:position.latitude
+                                                            longitude:position.longitude
+                                                                 zoom:12];
+    
+    CGRect frame = CGRectMake(0, 0, CGRectGetWidth(self.mapView.frame), CGRectGetHeight(self.mapView.frame));
+    GMSMapView *mapView = [GMSMapView mapWithFrame:frame camera:camera];
+    GMSMarker *marker = [GMSMarker new];
+    marker.position = position;
+    marker.map = mapView;
+
+    [[self.mapView subviews] enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [obj removeFromSuperview];
+    }];
+    [self.mapView addSubview:mapView];
 }
 
 @end
