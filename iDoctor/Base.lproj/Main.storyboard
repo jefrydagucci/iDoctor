@@ -34,21 +34,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FfX-Yn-TFP">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="456"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="JJs-n0-zRz"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="7Xp-6k-EnE"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mum-Vb-ct8">
+                                <rect key="frame" x="499" y="540" width="81" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="nDA-Au-J7n"/>
+                                </constraints>
+                                <state key="normal" title="Find Doctor"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="FfX-Yn-TFP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3HO-1Q-QZC"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FfX-Yn-TFP" secondAttribute="bottom" id="8ZE-Kb-50q"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FfX-Yn-TFP" secondAttribute="bottom" constant="100" id="8ZE-Kb-50q"/>
                             <constraint firstAttribute="trailing" secondItem="FfX-Yn-TFP" secondAttribute="trailing" id="DqT-2G-qgc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mum-Vb-ct8" secondAttribute="bottom" constant="20" id="M7L-83-Ki9"/>
+                            <constraint firstItem="mum-Vb-ct8" firstAttribute="top" secondItem="FfX-Yn-TFP" secondAttribute="bottom" constant="20" id="MGi-0z-tbr"/>
                             <constraint firstItem="FfX-Yn-TFP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ke1-Me-5wo"/>
+                            <constraint firstAttribute="trailing" secondItem="mum-Vb-ct8" secondAttribute="trailing" constant="20" id="yqd-14-bax"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8ZE-Kb-50q"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="yzN-Om-42z"/>
                     <connections>
