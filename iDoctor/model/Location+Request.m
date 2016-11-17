@@ -25,7 +25,7 @@ typedef enum {
 + (void)getLocationWithPathPattern:(NSString *)pathPattern
                            success:(void(^)(ASManagedObjectRequestOperation *operation,
                                             RKMappingResult *result,
-                                            Location *Location))success
+                                            NSArray *resultsArray))success
                            failure:(void(^)(ASManagedObjectRequestOperation *operation,
                                             NSError *error))failure{
     
@@ -44,9 +44,7 @@ typedef enum {
         
         [request setAPIKey];
         
-    } success:^(ASManagedObjectRequestOperation *operation, RKMappingResult *result, NSArray *resultsArray) {
-        !success?:success(operation, result, resultsArray.firstObject);
-    } failure:failure];
+    } success:success failure:failure];
 }
 
 + (NSIndexSet *)statusCodesForLocationRequestType:(LocationRequestType)LocationRequestType{

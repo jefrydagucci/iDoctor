@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Location+Request.h"
 
 @interface ViewController ()
 

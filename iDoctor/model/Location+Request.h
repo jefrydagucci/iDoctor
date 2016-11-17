@@ -11,10 +11,11 @@
 @interface Location (Request)
 
 #pragma mark - GET request
+
 + (void)getLocationWithPathPattern:(NSString *)pathPattern
                            success:(void(^)(ASManagedObjectRequestOperation *operation,
                                             RKMappingResult *result,
-                                            Location *Location))success
+                                            NSArray *resultsArray))success
                            failure:(void(^)(ASManagedObjectRequestOperation *operation,
                                             NSError *error))failure;
 
