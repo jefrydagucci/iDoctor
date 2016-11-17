@@ -19,6 +19,7 @@ pod 'TTTAttributedLabel'
 pod 'SVProgressHUD'
 pod 'MXParallaxHeader'
 pod 'APLTextField'
+pod 'CSNotificationView'
 
 # helper
 pod 'ASBaseIOSProject', '~> 0.9.5'

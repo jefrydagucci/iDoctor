@@ -57,6 +57,7 @@
         } failure:^(ASManagedObjectRequestOperation *operation, NSError *error) {
             ASLog(error.localizedDescription);
             [self.view hideActivityView];
+            [CSNotificationView showInViewController:self style:CSNotificationViewStyleError message:error.localizedDescription];
         }];
     }];
 }

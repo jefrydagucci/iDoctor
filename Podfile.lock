@@ -5,6 +5,7 @@ PODS:
   - ASRestKit (0.9.1):
     - ASBaseIOSProject (~> 0.9.4)
     - RestKit (~> 0.24.0)
+  - CSNotificationView (0.5.4)
   - GoogleMaps (2.1.1):
     - GoogleMaps/Maps (= 2.1.1)
   - GoogleMaps/Base (2.1.1)
@@ -47,6 +48,7 @@ DEPENDENCIES:
   - APLTextField
   - ASBaseIOSProject (~> 0.9.5)
   - ASRestKit
+  - CSNotificationView
   - GoogleMaps
   - GooglePlaces
   - IQKeyboardManager
@@ -61,6 +63,7 @@ SPEC CHECKSUMS:
   APLTextField: 218070e4fd0892b770ee0d78b48b8c64b7693ce8
   ASBaseIOSProject: d9a090ac1bfa5a838b25fba1db4287be2583fb5f
   ASRestKit: 62b2f12117febd85305288b550a71f811fb239f9
+  CSNotificationView: 0792f5220163c2befaf1a9716aa3d5a7d6bd4fb1
   GoogleMaps: a5b5bbe47734e2443bde781a6aa64e69fdb6d785
   GooglePlaces: 35636d86e5020cba3856eb988c09a5491de0a65a
   IQKeyboardManager: 69002bb4fea60596b710e57d426abc00e5063630
@@ -75,6 +78,6 @@ SPEC CHECKSUMS:
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
   UILabel+ContentSize: ca71fe5d87afd752e53a34466e52598d65db4705
 
-PODFILE CHECKSUM: 1622f9afa6ea265d7c9d4e88024289488d2bc20d
+PODFILE CHECKSUM: d1000ccb8076780ca56d81b32426bb5e0d02d852
 
 COCOAPODS: 1.0.1
