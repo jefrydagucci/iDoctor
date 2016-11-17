@@ -1,0 +1,17 @@
+Pods/
+iDoctor.xcworkspace/
+
+# user-specific XCode stuff
+*.pbxuser
+*.perspectivev3
+*.xcuserdatad
+*.xccheckout
+*.xcworkspacedata
+*.xcworkspace
+
+# temp nibs and swap files
+*~.nib
+*.swp
+*.orig
+
+ios-charts/
