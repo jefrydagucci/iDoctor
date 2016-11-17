@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Appslon (http://appslon.com). All rights reserved.
 //
 
-#define API_URL @"http://mercato-capitale.cloud.tyk.io"
-#define API_VERSION @"dev-apis"
+#define API_URL @"http://52.76.85.10"
+#define API_VERSION @""
 #define API_KEY @"563c6303bc9a6900010000027b9bf9b1352249575b23386b0fc0a8e4"
 //#define API_KEY @"563c6303bc9a690001000002f1f834e2238d40ad54f04da037c1ecf0"
 static BOOL devMode = 1;
@@ -31,6 +31,7 @@ NSString *sAPIPointStaticURL                = @"staticurl";
 NSString *sAPIPointSubjectList              = @"subjectlist";
 
 #import "MRAPIManager.h"
+#import "ASSynthesizeSingleton.h"
 
 @implementation MRAPIManager
 
@@ -73,9 +74,8 @@ ASSynthesizeSingleton(MRAPIManager, sharedInstance)
 
 #pragma mark - base
 - (NSString *)endPointBase{
-    NSAssert(self.APIVersion, @"API version cannot be nil");
-    return [NSString stringWithFormat:@"/%@",
-            self.APIVersion];
+    return self.APIVersion?[NSString stringWithFormat:@"/%@",
+                            self.APIVersion]:@"";
 }
 
 #pragma mark - account

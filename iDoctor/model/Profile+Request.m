@@ -13,10 +13,6 @@ typedef enum {
 
 #import "Profile+Request.h"
 
-@implementation Profile (Request)
-
-@end
-
 #import "NSManagedObject+ASManagedObjectRequestOperation.h"
 #import "NSMutableURLRequest+MRHelper.h"
 #import "MRParams.h"
@@ -34,15 +30,6 @@ typedef enum {
                           failure:(void(^)(ASManagedObjectRequestOperation *operation,
                                            NSError *error))failure{
     
-}
-
-+ (void)getProfileWithPathPattern:(NSString *)pathPattern
-                          success:(void(^)(ASManagedObjectRequestOperation *operation,
-                                           RKMappingResult *result,
-                                           Profile *Profile))success
-                          failure:(void(^)(ASManagedObjectRequestOperation *operation,
-                                           NSError *error))failure{
-    
     NSString *baseURLString     = [MRAPIManager sharedInstance].APIHost;
     pathPattern = pathPattern?pathPattern:@"";
     
@@ -50,9 +37,6 @@ typedef enum {
     NSIndexSet *statusCodes     = [[self class] statusCodesForProfileRequestType:ProfileRequestTypeGet];
     
     NSMutableDictionary *params = [NSMutableDictionary new];
-    !language?:[params setObject:language forKey:sParamLanguage];
-    
-    pathPattern = [pathPattern stringByReplacingOccurrencesOfString:sParamIdPlaceholder withString:productId];
     
     RKManagedObjectStore *managedObjectStore        = [MRDatabaseManager sharedInstance].managedObjectStore;
     NSManagedObjectContext *managedObjectContext    = [MRDatabaseManager sharedInstance].managedObjectContext;

@@ -6,7 +6,7 @@
 //  Copyright © 2016 Appslon. All rights reserved.
 //
 
-
+#import "Profile.h"
 
 @interface Profile (Request)
 

@@ -13,10 +13,6 @@ typedef enum {
 
 #import "Location+Request.h"
 
-@implementation Location (Request)
-
-@end
-
 #import "NSManagedObject+ASManagedObjectRequestOperation.h"
 #import "NSMutableURLRequest+MRHelper.h"
 #import "MRParams.h"
@@ -40,9 +36,6 @@ typedef enum {
     NSIndexSet *statusCodes     = [[self class] statusCodesForLocationRequestType:LocationRequestTypeGet];
     
     NSMutableDictionary *params = [NSMutableDictionary new];
-    !language?:[params setObject:language forKey:sParamLanguage];
-    
-    pathPattern = [pathPattern stringByReplacingOccurrencesOfString:sParamIdPlaceholder withString:productId];
     
     RKManagedObjectStore *managedObjectStore        = [MRDatabaseManager sharedInstance].managedObjectStore;
     NSManagedObjectContext *managedObjectContext    = [MRDatabaseManager sharedInstance].managedObjectContext;

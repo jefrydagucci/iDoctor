@@ -6,8 +6,16 @@
 //  Copyright © 2016 Appslon. All rights reserved.
 //
 
-
+#import "Location.h"
 
 @interface Location (Request)
+
+#pragma mark - GET request
++ (void)getLocationWithPathPattern:(NSString *)pathPattern
+                           success:(void(^)(ASManagedObjectRequestOperation *operation,
+                                            RKMappingResult *result,
+                                            Location *Location))success
+                           failure:(void(^)(ASManagedObjectRequestOperation *operation,
+                                            NSError *error))failure;
 
 @end

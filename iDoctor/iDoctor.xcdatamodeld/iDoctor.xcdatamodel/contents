@@ -4,6 +4,13 @@
         <attribute name="area" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="MRBaseEntity" representedClassName="MRBaseEntity" syncable="YES">
+        <attribute name="error" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nextaction" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="success" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MRError" representedClassName="MRError" syncable="YES"/>
     <entity name="Profile" representedClassName="Profile" syncable="YES">
         <attribute name="area" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
@@ -22,5 +29,7 @@
     <elements>
         <element name="Location" positionX="-63" positionY="-18" width="128" height="75"/>
         <element name="Profile" positionX="-54" positionY="9" width="128" height="240"/>
+        <element name="MRError" positionX="-54" positionY="90" width="128" height="45"/>
+        <element name="MRBaseEntity" positionX="-45" positionY="99" width="128" height="105"/>
     </elements>
 </model>

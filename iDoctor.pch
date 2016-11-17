@@ -1,0 +1,21 @@
+//
+//  iDoctor.pch
+//  iDoctor
+//
+//  Created by Jefry Da Gucci on 11/18/16.
+//  Copyright © 2016 Appslon. All rights reserved.
+//
+
+#ifndef iDoctor_pch
+#define iDoctor_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <ASRestKit/ASRestKit.h>
+#import <RestKit/RestKit.h>
+#import <UIView+SDCAutoLayout.h>
+#import <ASBaseIOSProject/ASBaseIOSProject.h>
+#import "ASSynthesizeSingleton.h"
+
+#endif /* iDoctor_pch */

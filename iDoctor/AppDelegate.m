@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MRAPIManager.h"
 
 @interface AppDelegate ()
 

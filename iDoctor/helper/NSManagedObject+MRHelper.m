@@ -7,6 +7,7 @@
 //
 
 #import "NSManagedObject+MRHelper.h"
+#import "MRDatabaseManager.h"
 
 @implementation NSManagedObject (MRHelper)
 
