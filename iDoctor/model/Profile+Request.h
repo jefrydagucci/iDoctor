@@ -10,4 +10,11 @@
 
 @interface Profile (Request)
 
++ (void)getProfileWithPathPattern:(NSString *)pathPattern
+                          success:(void(^)(ASManagedObjectRequestOperation *operation,
+                                           RKMappingResult *result,
+                                           NSArray *resultsArray))success
+                          failure:(void(^)(ASManagedObjectRequestOperation *operation,
+                                           NSError *error))failure;
+
 @end
