@@ -48,6 +48,8 @@
 		FA9F552B1DDE300C004C74CC /* MRTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9F55291DDE300C004C74CC /* MRTableViewController.m */; };
 		FA9F552F1DDE3036004C74CC /* MRTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9F552E1DDE3036004C74CC /* MRTableViewCell.m */; };
 		FA9F55321DDE3F56004C74CC /* ProfilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9F55311DDE3F56004C74CC /* ProfilesViewController.m */; };
+		FA9F553D1DDE41DA004C74CC /* ProfileTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9F553B1DDE41DA004C74CC /* ProfileTableCell.m */; };
+		FA9F553E1DDE41DA004C74CC /* ProfileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9F553C1DDE41DA004C74CC /* ProfileTableCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +149,9 @@
 		FA9F552E1DDE3036004C74CC /* MRTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRTableViewCell.m; path = view/MRTableViewCell.m; sourceTree = "<group>"; };
 		FA9F55301DDE3F56004C74CC /* ProfilesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfilesViewController.h; path = controller/ProfilesViewController.h; sourceTree = "<group>"; };
 		FA9F55311DDE3F56004C74CC /* ProfilesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfilesViewController.m; path = controller/ProfilesViewController.m; sourceTree = "<group>"; };
+		FA9F553A1DDE41DA004C74CC /* ProfileTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileTableCell.h; path = view/ProfileTableCell.h; sourceTree = "<group>"; };
+		FA9F553B1DDE41DA004C74CC /* ProfileTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileTableCell.m; path = view/ProfileTableCell.m; sourceTree = "<group>"; };
+		FA9F553C1DDE41DA004C74CC /* ProfileTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileTableCell.xib; path = view/ProfileTableCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +342,9 @@
 			children = (
 				FA9F552D1DDE3036004C74CC /* MRTableViewCell.h */,
 				FA9F552E1DDE3036004C74CC /* MRTableViewCell.m */,
+				FA9F553A1DDE41DA004C74CC /* ProfileTableCell.h */,
+				FA9F553B1DDE41DA004C74CC /* ProfileTableCell.m */,
+				FA9F553C1DDE41DA004C74CC /* ProfileTableCell.xib */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -430,6 +438,7 @@
 			files = (
 				FA4E835D1DDDDB6800AAC364 /* LaunchScreen.storyboard in Resources */,
 				FA4E835A1DDDDB6800AAC364 /* Assets.xcassets in Resources */,
+				FA9F553E1DDE41DA004C74CC /* ProfileTableCell.xib in Resources */,
 				FA4E83551DDDDB6800AAC364 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,6 +541,7 @@
 				FA9F55121DDE2B85004C74CC /* NSMutableURLRequest+MRHelper.m in Sources */,
 				FA9F55071DDE2B85004C74CC /* ASManagedObjectRequestOperation+Custom.m in Sources */,
 				FA9F55141DDE2B85004C74CC /* NSString+MRHelper.m in Sources */,
+				FA9F553D1DDE41DA004C74CC /* ProfileTableCell.m in Sources */,
 				FA9F55231DDE2F07004C74CC /* LocationViewController.m in Sources */,
 				FA9F550E1DDE2B85004C74CC /* NSManagedObject+ASHelper.m in Sources */,
 				FA9F550C1DDE2B85004C74CC /* MRError.m in Sources */,
