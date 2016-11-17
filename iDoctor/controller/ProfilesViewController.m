@@ -59,8 +59,9 @@ UITextFieldDelegate>
     [super getContentWithRefreshContentType:refreshContentType];
     
     [self.view showLoadingWithBlock:^{
-        
-        [Profile getProfileWithPathPattern:@"/test/datalist.json" success:^(ASManagedObjectRequestOperation *operation, RKMappingResult *result, NSArray *resultsArray) {
+        [Profile getProfileWithPathPattern:[NSString stringWithFormat:@"/%@/datalist.json",
+                                            [MRAPIManager sharedInstance].APIVersion]
+                                             success:^(ASManagedObjectRequestOperation *operation, RKMappingResult *result, NSArray *resultsArray) {
             
             self.resultsArray = resultsArray;
             NSInteger page = resultsArray.count/maxPerPage;

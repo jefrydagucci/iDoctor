@@ -20,5 +20,6 @@
 #import "ASSynthesizeSingleton.h"
 
 #import "UIView+MRHelper.h"
+#import "MRAPIManager.h"
 
 #endif /* iDoctor_pch */

@@ -46,7 +46,8 @@
     
     NSString *profileId = self.profile.obj_id;
     [self.view showLoadingWithBlock:^{
-        [Profile getProfileWithPathPattern:[NSString stringWithFormat:@"/test/profile/%@.json",
+        [Profile getProfileWithPathPattern:[NSString stringWithFormat:@"/%@/profile/%@.json",
+                                            [MRAPIManager sharedInstance].APIVersion,
                                             profileId] success:^(ASManagedObjectRequestOperation *operation, RKMappingResult *result, NSArray *resultsArray) {
             Profile *p = resultsArray.firstObject;
             if([p isKindOfClass:[Profile class]]){

@@ -7,7 +7,7 @@
 //
 
 #define API_URL @"http://52.76.85.10"
-#define API_VERSION @""
+#define API_VERSION @"test"
 #define API_KEY @"563c6303bc9a6900010000027b9bf9b1352249575b23386b0fc0a8e4"
 //#define API_KEY @"563c6303bc9a690001000002f1f834e2238d40ad54f04da037c1ecf0"
 static BOOL devMode = 1;

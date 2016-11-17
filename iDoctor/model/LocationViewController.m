@@ -47,7 +47,8 @@
     
     [self.view showLoadingWithBlock:^{
         
-        [Location getLocationWithPathPattern:@"/test/location.json" success:^(ASManagedObjectRequestOperation *operation, RKMappingResult *result, NSArray *resultsArray) {
+        [Location getLocationWithPathPattern:[NSString stringWithFormat:@"/%@/location.json",
+                                              [MRAPIManager sharedInstance].APIVersion] success:^(ASManagedObjectRequestOperation *operation, RKMappingResult *result, NSArray *resultsArray) {
             
             self.resultsArr = resultsArray;
             
