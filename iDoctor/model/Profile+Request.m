@@ -34,6 +34,15 @@ typedef enum {
                           failure:(void(^)(ASManagedObjectRequestOperation *operation,
                                            NSError *error))failure{
     
+}
+
++ (void)getProfileWithPathPattern:(NSString *)pathPattern
+                          success:(void(^)(ASManagedObjectRequestOperation *operation,
+                                           RKMappingResult *result,
+                                           Profile *Profile))success
+                          failure:(void(^)(ASManagedObjectRequestOperation *operation,
+                                           NSError *error))failure{
+    
     NSString *baseURLString     = [MRAPIManager sharedInstance].APIHost;
     pathPattern = pathPattern?pathPattern:@"";
     
