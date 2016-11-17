@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class Profile;
 @interface ProfileDetailViewController : UIViewController
+
+@property (strong, nonatomic) Profile *profile;
 
 @end

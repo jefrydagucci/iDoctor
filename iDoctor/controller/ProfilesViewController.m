@@ -10,7 +10,10 @@
 #import "Profile+Request.h"
 #import "ProfileTableCell.h"
 
+#import "ProfileDetailViewController.h"
+
 @interface ProfilesViewController ()
+<UITableViewDelegate>
 
 @end
 
@@ -58,6 +61,12 @@
     return cell;
 }
 
-
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    Profile *p = self.arrData[indexPath.section][indexPath.row];
+    ProfileDetailViewController *nextVC = [[ProfileDetailViewController alloc]initWithNibName:NSStringFromClass([ProfileDetailViewController class]) bundle:nil];
+    [nextVC setProfile:p];
+    [self.navigationController pushViewController:nextVC animated:YES];
+}
 
 @end
