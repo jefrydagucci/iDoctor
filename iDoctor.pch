@@ -18,6 +18,7 @@
 #import <SVPullToRefresh/SVPullToRefresh.h>
 #import <CSNotificationView/CSNotificationView.h>
 #import <ASBaseIOSProject/ASBaseIOSProject.h>
+#import <UIAlertView+Blocks.h>
 #import "ASSynthesizeSingleton.h"
 
 #import "UIView+MRHelper.h"

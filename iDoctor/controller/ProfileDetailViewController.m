@@ -57,6 +57,12 @@
             ASLog(error.localizedDescription);
             [self.view hideActivityView];
             [CSNotificationView showInViewController:self style:CSNotificationViewStyleError message:error.localizedDescription];
+            
+            [UIAlertView showWithTitle:@"Retry?" message:@"Tap OK to retry" cancelButtonTitle:@"Cancel" otherButtonTitles:@[@"OK"] tapBlock:^(UIAlertView * _Nonnull alertView, NSInteger buttonIndex) {
+                if(buttonIndex == 1){
+                    [self refreshProfile];
+                }
+            }];
         }];
     }];
 }

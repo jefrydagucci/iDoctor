@@ -43,6 +43,7 @@ PODS:
   - SVPullToRefresh (0.4.1)
   - TransitionKit (2.1.1)
   - TTTAttributedLabel (2.0.0)
+  - UIAlertView+Blocks (0.9)
   - UILabel+ContentSize (1.0.3)
 
 DEPENDENCIES:
@@ -58,6 +59,7 @@ DEPENDENCIES:
   - SVProgressHUD
   - SVPullToRefresh
   - TTTAttributedLabel
+  - UIAlertView+Blocks
   - UILabel+ContentSize (~> 1.0)
 
 SPEC CHECKSUMS:
@@ -79,8 +81,9 @@ SPEC CHECKSUMS:
   SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
   TransitionKit: 3a14b6acc7cf2d1dd3e454e24dbad1cfab9a1ef1
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
+  UIAlertView+Blocks: a46c99c5144f6c5dbc7d62fd2a0678daceec89a3
   UILabel+ContentSize: ca71fe5d87afd752e53a34466e52598d65db4705
 
-PODFILE CHECKSUM: 1dbefdcbfa5fc537f9555cf4a92f30c443c09bf3
+PODFILE CHECKSUM: 94d14df402b2a1eb3323f3c26dedef1b47eaa8df
 
 COCOAPODS: 1.0.1

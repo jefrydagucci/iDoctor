@@ -21,6 +21,7 @@ pod 'MXParallaxHeader'
 pod 'APLTextField'
 pod 'CSNotificationView'
 pod 'SVPullToRefresh'
+pod 'UIAlertView+Blocks'
 
 # helper
 pod 'ASBaseIOSProject', '~> 0.9.5'
