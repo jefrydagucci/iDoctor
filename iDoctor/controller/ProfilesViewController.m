@@ -16,7 +16,8 @@ static NSInteger maxPerPage = 10;
 #import <APLTextField/APLTextField.h>
 
 @interface ProfilesViewController ()
-<UITableViewDelegate>
+<UITableViewDelegate,
+UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet APLTextField *txPage;
 @property (strong, nonatomic) NSArray *resultsArray;
@@ -30,6 +31,8 @@ static NSInteger maxPerPage = 10;
     
     insetNavBarUnhidden = UIEdgeInsetsZero;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ProfileTableCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([ProfileTableCell class])];
+    
+    self.txPage.delegate = self;
 }
 
 - (void)processingResultWithpage:(NSInteger)page
@@ -40,7 +43,8 @@ static NSInteger maxPerPage = 10;
                     completion:(void(^)(void))completion{
     
     NSInteger preferencePage = page;
-    NSArray *subArray = [self.resultsArray subarrayWithRange:NSMakeRange((preferencePage-1)*maxPerPage, maxPerPage)];
+    NSInteger firstIndex = (preferencePage-1)*maxPerPage;
+    NSArray *subArray = [self.resultsArray subarrayWithRange:NSMakeRange(firstIndex, MIN(maxPerPage, self.resultsArray.count - firstIndex))];
     
     [self processingSuccessWithOperation:operation result:result arrData:subArray refreshContentType:refreshContentType tableView:self.tableView completion:completion];
 }
@@ -56,6 +60,12 @@ static NSInteger maxPerPage = 10;
             NSInteger page = resultsArray.count/maxPerPage;
             NSInteger modPage = resultsArray.count%maxPerPage;
             if(modPage>0){page++;}
+            
+            NSMutableArray *pages = [NSMutableArray new];
+            for(NSInteger i=1; i<=page; i++){
+                [pages addObject:[NSString stringWithFormat:@"%li", i]];
+            }
+            [self.txPage setPickerOptions:pages];
             
             NSInteger preferencePage = [self.txPage.text integerValue];
             if (preferencePage==0) preferencePage=1;
@@ -94,6 +104,26 @@ static NSInteger maxPerPage = 10;
     ProfileDetailViewController *nextVC = [[ProfileDetailViewController alloc]initWithNibName:NSStringFromClass([ProfileDetailViewController class]) bundle:nil];
     [nextVC setProfile:p];
     [self.navigationController pushViewController:nextVC animated:YES];
+}
+
+#pragma mark - UITextFieldDelegate
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    if(textField == self.txPage){
+        NSInteger preferencePage = [self.txPage.text integerValue];
+        if (preferencePage==0) preferencePage=1;
+        
+        [self processingResultWithpage:preferencePage operation:nil result:nil refreshContentType:RefreshContentTypeReplaceAll tableView:self.tableView completion:^{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+            });
+        }];
+        
+        [self.view hideActivityView];
+    }
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    return YES;
 }
 
 @end
