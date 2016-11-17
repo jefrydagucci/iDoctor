@@ -18,4 +18,6 @@
 #import <ASBaseIOSProject/ASBaseIOSProject.h>
 #import "ASSynthesizeSingleton.h"
 
+#import "UIView+MRHelper.h"
+
 #endif /* iDoctor_pch */

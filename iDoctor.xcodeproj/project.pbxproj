@@ -43,6 +43,10 @@
 		FA9F551D1DDE2B85004C74CC /* Profile+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9F55011DDE2B85004C74CC /* Profile+CoreDataProperties.m */; };
 		FA9F551E1DDE2B85004C74CC /* Profile+Request.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9F55031DDE2B85004C74CC /* Profile+Request.m */; };
 		FA9F551F1DDE2B85004C74CC /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9F55051DDE2B85004C74CC /* Profile.m */; };
+		FA9F55231DDE2F07004C74CC /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9F55211DDE2F07004C74CC /* LocationViewController.m */; };
+		FA9F552A1DDE300C004C74CC /* MRListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9F55271DDE300C004C74CC /* MRListViewController.m */; };
+		FA9F552B1DDE300C004C74CC /* MRTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9F55291DDE300C004C74CC /* MRTableViewController.m */; };
+		FA9F552F1DDE3036004C74CC /* MRTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9F552E1DDE3036004C74CC /* MRTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +136,14 @@
 		FA9F55031DDE2B85004C74CC /* Profile+Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Profile+Request.m"; sourceTree = "<group>"; };
 		FA9F55041DDE2B85004C74CC /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
 		FA9F55051DDE2B85004C74CC /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
+		FA9F55201DDE2F07004C74CC /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		FA9F55211DDE2F07004C74CC /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		FA9F55261DDE300C004C74CC /* MRListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRListViewController.h; path = controller/MRListViewController.h; sourceTree = "<group>"; };
+		FA9F55271DDE300C004C74CC /* MRListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRListViewController.m; path = controller/MRListViewController.m; sourceTree = "<group>"; };
+		FA9F55281DDE300C004C74CC /* MRTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRTableViewController.h; path = controller/MRTableViewController.h; sourceTree = "<group>"; };
+		FA9F55291DDE300C004C74CC /* MRTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRTableViewController.m; path = controller/MRTableViewController.m; sourceTree = "<group>"; };
+		FA9F552D1DDE3036004C74CC /* MRTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRTableViewCell.h; path = view/MRTableViewCell.h; sourceTree = "<group>"; };
+		FA9F552E1DDE3036004C74CC /* MRTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRTableViewCell.m; path = view/MRTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +211,8 @@
 		FA4E83491DDDDB6800AAC364 /* iDoctor */ = {
 			isa = PBXGroup;
 			children = (
+				FA9F552C1DDE302A004C74CC /* view */,
+				FA9F55251DDE2FEC004C74CC /* controller */,
 				FA9F54CE1DDE2B84004C74CC /* helper */,
 				FA9F54F31DDE2B84004C74CC /* model */,
 				FA4E834D1DDDDB6800AAC364 /* AppDelegate.h */,
@@ -296,8 +310,30 @@
 				FA9F55031DDE2B85004C74CC /* Profile+Request.m */,
 				FA9F55041DDE2B85004C74CC /* Profile.h */,
 				FA9F55051DDE2B85004C74CC /* Profile.m */,
+				FA9F55201DDE2F07004C74CC /* LocationViewController.h */,
+				FA9F55211DDE2F07004C74CC /* LocationViewController.m */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		FA9F55251DDE2FEC004C74CC /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA9F55261DDE300C004C74CC /* MRListViewController.h */,
+				FA9F55271DDE300C004C74CC /* MRListViewController.m */,
+				FA9F55281DDE300C004C74CC /* MRTableViewController.h */,
+				FA9F55291DDE300C004C74CC /* MRTableViewController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		FA9F552C1DDE302A004C74CC /* view */ = {
+			isa = PBXGroup;
+			children = (
+				FA9F552D1DDE3036004C74CC /* MRTableViewCell.h */,
+				FA9F552E1DDE3036004C74CC /* MRTableViewCell.m */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -491,22 +527,26 @@
 				FA9F55121DDE2B85004C74CC /* NSMutableURLRequest+MRHelper.m in Sources */,
 				FA9F55071DDE2B85004C74CC /* ASManagedObjectRequestOperation+Custom.m in Sources */,
 				FA9F55141DDE2B85004C74CC /* NSString+MRHelper.m in Sources */,
+				FA9F55231DDE2F07004C74CC /* LocationViewController.m in Sources */,
 				FA9F550E1DDE2B85004C74CC /* NSManagedObject+ASHelper.m in Sources */,
 				FA9F550C1DDE2B85004C74CC /* MRError.m in Sources */,
 				FA9F55111DDE2B85004C74CC /* NSManagedObject+MRHelper.m in Sources */,
 				FA9F55081DDE2B85004C74CC /* MRAPIManager.m in Sources */,
+				FA9F552A1DDE300C004C74CC /* MRListViewController.m in Sources */,
 				FA4E83521DDDDB6800AAC364 /* ViewController.m in Sources */,
 				FA9F550B1DDE2B85004C74CC /* MRError+Mapping.m in Sources */,
 				FA9F55131DDE2B85004C74CC /* NSString+ASHelper.m in Sources */,
 				FA4E834F1DDDDB6800AAC364 /* AppDelegate.m in Sources */,
 				FA9F550F1DDE2B85004C74CC /* NSManagedObject+ASManagedObjectRequestOperation.m in Sources */,
 				FA9F55091DDE2B85004C74CC /* MRDatabaseManager.m in Sources */,
+				FA9F552F1DDE3036004C74CC /* MRTableViewCell.m in Sources */,
 				FA4E834C1DDDDB6800AAC364 /* main.m in Sources */,
 				FA9F55171DDE2B85004C74CC /* Location+CoreDataProperties.m in Sources */,
 				FA9F55151DDE2B85004C74CC /* UIView+MRHelper.m in Sources */,
 				FA9F551D1DDE2B85004C74CC /* Profile+CoreDataProperties.m in Sources */,
 				FA9F55181DDE2B85004C74CC /* Location+Request.m in Sources */,
 				FA9F551F1DDE2B85004C74CC /* Profile.m in Sources */,
+				FA9F552B1DDE300C004C74CC /* MRTableViewController.m in Sources */,
 				FA9F551A1DDE2B85004C74CC /* MRBaseEntity+CoreDataProperties.m in Sources */,
 				FA9F550D1DDE2B85004C74CC /* NSData+MRHelper.m in Sources */,
 				FA9F551B1DDE2B85004C74CC /* MRBaseEntity+Mapping.m in Sources */,
